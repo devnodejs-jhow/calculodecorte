@@ -1,3 +1,24 @@
+body {
+    background: url('img/fundo.png'), #6DB3F2;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1vw auto;
+    background-color: #3e4551;
+}
+#titleNavbar {
+    color: white;
+    font-size: 5rem;
+    font-family: 'Lobster', sans-serif;
+    font-family: 'Playfair Display', serif;
+}
+
 h1 {
     text-align: center;
     padding: 2vw;
@@ -31,60 +52,69 @@ h3 {
 }
 
 
-body {
-    background: url('img/fundo.png'), #6DB3F2;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    background-position: center center;
-    background-size: cover;
-}
 
 input {
     color: white;
 }
 
-.containerButton{
+.containerButton {
     width: 100vw;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#btnOne{
+
+#btnOne {
     font-size: 1rem;
     border-radius: .6rem;
     -webkit-border-radius: .6rem;
     -moz-border-radius: .6rem;
     -ms-border-radius: .6rem;
     -o-border-radius: .6rem;
+    margin-bottom: 2rem;
 }
-label{
+#btnTwo {
+    font-size: 1rem;
+    border-radius: .6rem;
+    -webkit-border-radius: .6rem;
+    -moz-border-radius: .6rem;
+    -ms-border-radius: .6rem;
+    -o-border-radius: .6rem;
+    margin-bottom: 2rem;
+}
+
+label {
     font-size: 1.5rem;
     font-style: italic;
     color: #000;
     -webkit-text-stroke: 0.5px red;
 }
-#containerButtons{
+
+#containerButtons {
     display: flex;
 }
-#textRotacao{
+
+#textRotacao {
     width: 30vw;
     text-align: center;
     text-justify: center;
 }
-#textAvanco{
+
+#textAvanco {
     width: 30vw;
     text-align: center;
     text-justify: center;
 }
-#textContainer1{
+
+#textContainer1 {
     color: white;
-    font-size:3rem;
+    font-size: 3rem;
     -webkit-text-stroke: 2px green;
 }
-#textContainer2{
+
+#textContainer2 {
     color: white;
-    font-size:3rem;
+    font-size: 3rem;
     -webkit-text-stroke: 2px green;
 }

@@ -12,12 +12,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Calcular parâmetros de corte</h1>
-    </div>
+    <nav>
+        <div class="container-fluid col">
+            <img src="./img/calculateParameter.png" width="80" height="80" alt="">
+        </div>
+        <div class="container-fluid col">
+            <div class="container">
+                <h1>Calcular parâmetros de corte</h1>
+            </div>
+        </div>
+    </nav>
     <div class="containerForm">
         <div>
             <div class="container">
@@ -29,7 +39,8 @@
             </div>
             <div class="mb-3">
                 <label for="velocidade" class="form-label">Velocidade de corte(Vc)</label>
-                <input type="number" class="form-control btnOne" id="velocidade" placeholder="Velocidade de corte(m/min)">
+                <input type="number" class="form-control btnOne" id="velocidade"
+                    placeholder="Velocidade de corte(m/min)">
             </div>
         </div>
         <div>
@@ -52,10 +63,10 @@
     </div>
     <div class="containerForm">
         <div id="textRotacao">
-                <h3 id="textContainer1"></h3>
+            <h3 id="textContainer1"></h3>
         </div>
         <div id="textAvanco">
-                <h3 id="textContainer2"> </h3>
+            <h3 id="textContainer2"> </h3>
         </div>
     </div>
     <div id="containerButtons">
@@ -66,6 +77,64 @@
             <button type="button" id="btnTwo" class="btn btn-success">Calcular</button>
         </div>
     </div>
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white" style="background-color: #3e4551">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <p class="d-flex justify-content-center align-items-center">
+                    <span class="me-3">Contribua conosco</span>
+                    <button type="button" class="btn btn-outline-light btn-rounded">
+                        Contrinuir
+                    </button>
+                </p>
+            </section>
+            <!-- Section: CTA -->
+
+            <hr class="mb-4" />
+
+            <!-- Section: Social media -->
+            <section class="mb-4 text-center">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2023 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">Jonathan Desenvolvedor Web</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- End of .container -->
 </body>
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
 </html>

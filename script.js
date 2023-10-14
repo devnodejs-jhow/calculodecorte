@@ -34,7 +34,7 @@ calcularRotacao.addEventListener('click', () => {
     });
     if (arrayResult.includes('')) {
 
-        window.alert("Todos os campos devem ser preenchidos");
+        window.alert("Todos os campos referidos a rotação devem ser preenchidos");
         arrayResult = []
     } else {
         inserResultadoRotacao.textContent = Math.floor(functionCalcularRotacao(Number(velocidade.value), Number(diametro.value)))
@@ -48,7 +48,14 @@ calcularAvanco.addEventListener('click', () => {
     allInputsAvanco.forEach(element => {
         arrayResult.push(element.value)
     });
+    if (arrayResult.includes('')) {
 
+        window.alert("Todos os campos referentes ao avanço devem ser preenchidos");
+        arrayResult = []
+    } else {
+        inserResultadoAvanco.textContent = Math.floor(functionCalcularAvanco(Number(rotacao.value), Number(avanco.value), Number(qtdFacas.value)))
+        console.log(Number(diametro.value), Number(velocidade.value))
+    }
 })
 
 
@@ -56,6 +63,6 @@ const functionCalcularRotacao = (vc, diamterTool) => {
     return (vc * 1000) / (diamterTool * pi)
 }
 
-const functionCalcularAvanco = () => {
-
+const functionCalcularAvanco = (rotacao,avanco,qtdFacas) => {
+    return rotacao*avanco*qtdFacas
 }
