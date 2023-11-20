@@ -3,33 +3,33 @@ const diametro = document.querySelector('#diametro')
 
 const velocidade = document.querySelector('#velocidade')
 
-const rotacao = document.querySelector('#rotacao')
+const rotacao_turn = document.querySelector('#rotacao_turn')
 
-const avanco = document.querySelector('#avanco')
+const avanco_turn = document.querySelector('#avanco_turn')
 
 const qtdFacas = document.querySelector('#qtdFacas')
 
 //Pega o array dos inputs para verificar se algum campo esta vazio quando clicar em calcular 
-const allInputsRotacao = document.querySelectorAll('.btnOne')
+const allInputsRotacao_turn = document.querySelectorAll('.btnOne')
 
-const allInputsAvanco = document.querySelectorAll('.btnTwo')
+const allInputsAvanco_turn = document.querySelectorAll('.btnTwo')
 
 //Botoes
-const calcularRotacao = document.querySelector('#btnOne')
+const calcularRotacao_turn = document.querySelector('#btnOne')
 
-const calcularAvanco = document.querySelector('#btnTwo')
+const calcularAvanco_turn = document.querySelector('#btnTwo')
 
 //Pega as divs que vão colocar o resutado das contas
-const inserResultadoRotacao = document.querySelector('#textContainer1')
+const inserResultadoRotacao_turn = document.querySelector('#textContainer1')
 
-const inserResultadoAvanco = document.querySelector('#textContainer2')
+const inserResultadoAvanco_turn = document.querySelector('#textContainer2')
 const pi = 3.14159265358979323846
 
 let arrayResult = []
 
-//Evento de clique de calcular rotacao
-calcularRotacao.addEventListener('click', () => {
-    allInputsRotacao.forEach(element => {
+//Evento de clique de calcular rotacao_turn
+calcularRotacao_turn.addEventListener('click', () => {
+    allInputsRotacao_turn.forEach(element => {
         arrayResult.push(element.value)
     });
     if (arrayResult.includes('')) {
@@ -37,15 +37,15 @@ calcularRotacao.addEventListener('click', () => {
         window.alert("Todos os campos referidos a rotação devem ser preenchidos");
         arrayResult = []
     } else {
-        inserResultadoRotacao.textContent = Math.floor(functionCalcularRotacao(Number(velocidade.value), Number(diametro.value)))
+        inserResultadoRotacao_turn.textContent = Math.floor(functionCalcularRotacao_turn(Number(velocidade.value), Number(diametro.value)))
         console.log(Number(diametro.value), Number(velocidade.value))
     }
 
 })
 
 //Evento de clique de calcular avanço
-calcularAvanco.addEventListener('click', () => {
-    allInputsAvanco.forEach(element => {
+calcularAvanco_turn.addEventListener('click', () => {
+    allInputsAvanco_turn.forEach(element => {
         arrayResult.push(element.value)
     });
     if (arrayResult.includes('')) {
@@ -53,16 +53,16 @@ calcularAvanco.addEventListener('click', () => {
         window.alert("Todos os campos referentes ao avanço devem ser preenchidos");
         arrayResult = []
     } else {
-        inserResultadoAvanco.textContent = Math.floor(functionCalcularAvanco(Number(rotacao.value), Number(avanco.value), Number(qtdFacas.value)))
+        inserResultadoAvanco_turn.textContent = Math.floor(functionCalcularAvanco_turn(Number(rotacao_turn.value), Number(avanco_turn.value)))
         console.log(Number(diametro.value), Number(velocidade.value))
     }
 })
 
 
-const functionCalcularRotacao = (vc, diamterTool) => {
+const functionCalcularRotacao_turn = (vc, diamterTool) => {
     return (vc * 1000) / (diamterTool * pi)
 }
 
-const functionCalcularAvanco = (rotacao,avanco,qtdFacas) => {
-    return rotacao*avanco*qtdFacas
+const functionCalcularAvanco_turn = (rotacao_turn,avanco_turn) => {
+    return avanco_turn/rotacao_turn
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parametros de corte</title>
+    <title>Cálculo de Torneamento</title>
     <link rel="icon" type="image/png" href="./img/calculateParameter.png" />
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -24,7 +24,7 @@
         </div>
         <div class="container-fluid col">
             <div class="container">
-                <h1>Calcular parâmetros de corte</h1>
+                <h1>Torneamento</h1>
             </div>
         </div>
     </nav>
@@ -34,7 +34,7 @@
                 <h3>Rotação</h3>
             </div>
             <div class="mb-3">
-                <label for="diametro" class="form-label">Diametro(mm)</label>
+                <label for="diametro" class="form-label">Diametro usinado(mm)</label>
                 <input type="number" class="form-control btnOne" id="diametro" placeholder="Diâmetro em milimetro">
             </div>
             <div class="mb-3">
@@ -45,24 +45,20 @@
         </div>
         <div>
             <div class="container">
-                <h3>Avanço</h3>
+                <h3>Avanço por rotação</h3>
             </div>
             <div class="mb-3">
-                <label for="rotacao" class="form-label">Rotação(rpm)</label>
-                <input type="number" class="form-control btnTwo" id="rotacao" placeholder="Rotação(rpm)">
+                <label for="avanco_turn" class="form-label">Comprimento usinado por minuto(mm/min)</label>
+                <input type="number" class="form-control btnTwo" id="avanco_turn" placeholder="Comprimento usinado por minuto(mm/min)">
             </div>
             <div class="mb-3">
-                <label for="avanco" class="form-label">Avanço p/ faca(mm)</label>
-                <input type="number" class="form-control btnTwo" id="avanco" placeholder="Avanço por faca(mm)">
-            </div>
-            <div class="mb-3">
-                <label for="qtdFacas" class="form-label">Quantidade de facas(mm)</label>
-                <input type="number" class="form-control btnTwo" id="qtdFacas" placeholder="Quantidade de facas (Ex:2)">
+                <label for="rotacao_turn" class="form-label">Rotação do eixo principal(rpm)</label>
+                <input type="number" class="form-control btnTwo" id="rotacao_turn" placeholder="Rotação do eixo principal(rpm)">
             </div>
         </div>
     </div>
     <div class="containerForm">
-        <div id="textRotacao">
+        <div id="textRotacao_turn">
             <h3 id="textContainer1"></h3>
         </div>
         <div id="textAvanco">
@@ -85,10 +81,8 @@
             <!-- Section: Links -->
             <section class="">
                 <p class="d-flex justify-content-center align-items-center">
-                    <span class="me-3">Contribua conosco</span>
-                    <button type="button" class="btn btn-outline-light btn-rounded">
-                        Contrinuir
-                    </button>
+                    <span class="me-3">Voltar a pagina inicial</span>
+                    <a id="linkOne" class="btn btn-primary" href="/index.html" role="button">Voltar</a>
                 </p>
             </section>
             <!-- Section: CTA -->
