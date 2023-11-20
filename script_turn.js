@@ -53,7 +53,7 @@ calcularAvanco_turn.addEventListener('click', () => {
         window.alert("Todos os campos referentes ao avanço devem ser preenchidos");
         arrayResult = []
     } else {
-        inserResultadoAvanco_turn.textContent = Math.floor(functionCalcularAvanco_turn(Number(rotacao_turn.value), Number(avanco_turn.value)))
+        inserResultadoAvanco_turn.textContent = functionCalcularAvanco_turn(Number(rotacao_turn.value), Number(avanco_turn.value))
         console.log(Number(diametro.value), Number(velocidade.value))
     }
 })
