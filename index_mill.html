@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parametros de corte</title>
     <link rel="icon" type="image/png" href="./img/calculateParameter.png" />
-    <link rel="stylesheet" href="style_home.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,18 +28,53 @@
             </div>
         </div>
     </nav>
-    <div id="container_menu">
-        <div id="container_card">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="./img/fresadora.jpg"  alt="Card image cap">
+    <div class="containerForm">
+        <div>
+            <div class="container">
+                <h3>Rotação</h3>
             </div>
-            <a id="linkOne" class="btn btn-primary" href="/index_mill.html" role="button">Fresamento</a>
+            <div class="mb-3">
+                <label for="diametro" class="form-label">Diametro(mm)</label>
+                <input type="number" class="form-control btnOne" id="diametro" placeholder="Diâmetro em milimetro">
+            </div>
+            <div class="mb-3">
+                <label for="velocidade" class="form-label">Velocidade de corte(Vc)</label>
+                <input type="number" class="form-control btnOne" id="velocidade"
+                    placeholder="Velocidade de corte(m/min)">
+            </div>
         </div>
-        <div id="container_card">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="./img/torno.jpg" alt="Card image cap">
+        <div>
+            <div class="container">
+                <h3>Avanço</h3>
             </div>
-            <a id="linkTwo" class="btn btn-primary" href="/index_mill.html" role="button">Torneamento</a>
+            <div class="mb-3">
+                <label for="rotacao" class="form-label">Rotação(rpm)</label>
+                <input type="number" class="form-control btnTwo" id="rotacao" placeholder="Rotação(rpm)">
+            </div>
+            <div class="mb-3">
+                <label for="avanco" class="form-label">Avanço p/ faca(mm)</label>
+                <input type="number" class="form-control btnTwo" id="avanco" placeholder="Avanço por faca(mm)">
+            </div>
+            <div class="mb-3">
+                <label for="qtdFacas" class="form-label">Quantidade de facas(mm)</label>
+                <input type="number" class="form-control btnTwo" id="qtdFacas" placeholder="Quantidade de facas (Ex:2)">
+            </div>
+        </div>
+    </div>
+    <div class="containerForm">
+        <div id="textRotacao">
+            <h3 id="textContainer1"></h3>
+        </div>
+        <div id="textAvanco">
+            <h3 id="textContainer2"> </h3>
+        </div>
+    </div>
+    <div id="containerButtons">
+        <div class="containerButton">
+            <button type="button" id="btnOne" class="btn btn-success">Calcular</button>
+        </div>
+        <div class="containerButton">
+            <button type="button" id="btnTwo" class="btn btn-success">Calcular</button>
         </div>
     </div>
     <!-- Remove the container if you want to extend the Footer to full width. -->
@@ -100,5 +135,6 @@
     <!-- Footer -->
     <!-- End of .container -->
 </body>
+<script src="script_mill.js"></script>
 
 </html>

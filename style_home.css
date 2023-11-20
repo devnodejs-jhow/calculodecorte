@@ -1,0 +1,58 @@
+body {
+    background: url('img/fundo.png'), #6DB3F2;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 120vh;
+    background-position: center center;
+    background-size: cover;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1vw auto;
+    background-color: #3e4551;
+}
+#titleNavbar {
+    color: white;
+    font-size: 5rem;
+    font-family: 'Lobster', sans-serif;
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 2vw;
+    font-family: 'Young Serif', serif;
+    color: black;
+    font-size: larger;
+    -webkit-text-stroke: 2px red;
+}
+
+h3 {
+    text-align: center;
+    padding: 2vw;
+    font-family: 'Young Serif', serif;
+    font-size: larger;
+    -webkit-text-stroke: 0.5px red;
+}
+#container_menu{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+
+}
+#container_card{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#linkOne{
+    margin: 2rem;
+}
+#linkTwo{
+    margin: 2rem;
+}
